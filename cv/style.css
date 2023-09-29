@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600&family=Zeyada&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Onest', sans-serif;
+}
+
+:root {
+    --background-color: #add8e6;
+    --white: #ffffff;
+    --dark-blue: #003147;
+    --shadow: #0000006c;
+    --border: #808080c0;
+    --blue: #4545f1b7;
+    --percent-color: #00000088;
+}
+
+body {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px var(--shadow);
+}
+
+.container .left-side {
+    position: relative;
+    background: var(--dark-blue);
+    padding: 40px;
+}
+
+.profileText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.profileText .imgBox {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileText .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileText h2 {
+    color: var(--white);
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profileText h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactInfo {
+    padding-top: 40px;
+}
+
+.title {
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactInfo ul {
+    position: relative;
+}
+
+.contactInfo ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+}
+
+.contactInfo ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: var(--blue);
+}
+
+.contactInfo ul li span {
+    color: var(--white);
+    font-weight: 300;
+}
+
+.contactInfo.education li {
+    margin-bottom: 15px;
+}
+
+.contactInfo.education h3 {
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.contactInfo.education h4 {
+    color: var(--white);
+    font-weight: 300;
+}
+
+.language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: var(--percent-color);
+    display: block;
+    margin-top: 5px;
+}
+
+.language .percent>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--blue);
+}
+
+.container .right-side {
+    position: relative;
+    background: var(--white);
+    padding: 40px;
+}
+
+.about {
+    margin-bottom: 50px;
+}
+
+.about:last-child {
+    margin-bottom: 0;
+}
+
+.title_02 {
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    color: var(--dark-blue);
+}
+
+.about .box {
+    display: flex;
+    margin: 20px 0;
+}
+
+.about .box .year_company {
+    min-width: 150px;
+}
+
+.about .box .year_company h5 {
+    text-transform: uppercase;
+    color: var(--border);
+    font-weight: 700;
+}
+
+.about .box .text h4 {
+    text-transform: uppercase;
+    color: var(--blue);
+    font-size: 16px;
+}
+
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4 {
+    text-transform: uppercase;
+    color: var(--border);
+    font-weight: 500;
+}
+
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: var(--percent-color);
+}
+
+.skills .box .percent>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--blue);
+}
+
+.intrest ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.intrest ul li {
+    list-style: none;
+    color: var(--dark-blue);
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.intrest ul li i {
+    color: var(--blue);
+    font-size: 18px;
+    width: 20px;
+    margin: .4rem;
+}
+
+
+/* ------------------------- */
+/* Media Query */
+/* ------------------------- */
+@media(max-width: 1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .intrest ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
